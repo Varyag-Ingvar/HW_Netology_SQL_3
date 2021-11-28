@@ -6,16 +6,14 @@ create table if not exists genre (
 
 create table if not exists artist (
 	id serial primary key,
-	artist_name varchar(100) not null,
-	genre_id integer references genre(id)
+	artist_name varchar(100) not null
 );
 
 
 create table if not exists album (
 	id serial primary key,
 	album_name varchar(100) not null,
-	release_date integer,
-	artist_id integer references artist(id)
+	release_year integer
 );
 
 
